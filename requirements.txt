@@ -3,3 +3,5 @@ keras
 gunicorn
 keras_preprocessing
 tensorflow
+pandas
+numpy
