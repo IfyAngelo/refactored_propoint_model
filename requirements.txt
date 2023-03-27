@@ -2,3 +2,4 @@ flask
 keras
 gunicorn
 keras_preprocessing
+tensorflow
