@@ -29,7 +29,7 @@ def predict():
     sentence = request.json['sentence']
     sentence_lst = [sentence]
     sentence_seq = tokenizer.texts_to_sequences(sentence_lst)
-    sentence_padded = pad_sequences(sentence_seq, maxlen=50, padding='post')
+    sentence_padded = pad_sequences(sentence_seq, maxlen=60, padding='post')
     print(sentence_padded)
     pred = np.argmax(model.predict(sentence_padded), axis=-1)
     ans = get_key(pred[0])
