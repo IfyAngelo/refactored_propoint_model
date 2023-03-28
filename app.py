@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
+app.config['TIMEOUT'] = 240
 
 df = pd.read_csv('trainn.csv')
 X = df['Query']
@@ -36,10 +37,6 @@ def predict():
 
     return jsonify({'prediction':ans})
 
-# if __name__ == '__main__':
-#    app.run()
-
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', port=5000)
-
+   app.run()
 
